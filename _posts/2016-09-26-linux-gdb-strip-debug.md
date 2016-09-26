@@ -130,11 +130,11 @@ No locals.
 No locals.
 {% endhighlight %}
 
-如果提示找不到动态库的链接路径，则可以使用**set solib-search-path <path>**命令来设置动态库的链接路径。
+如果提示找不到动态库的链接路径，则可以使用**set solib-search-path "path"**命令来设置动态库的链接路径。
 
 ## 相关命令
 * ***strip --only-keep-debug -o "bin.sym" "bin"***
-* ***strip "bin" ***
+* ***strip "bin"***
 * ***gdb --exec="bin" --core="core" -symbols="bin.sym"***
 * ***info shared***
 * ***add-symbol-file "lib.sym" "address"***
