@@ -48,15 +48,22 @@ int main()
 {% endhighlight %}
 
 1. 生成动态链接库及主程序
+
     gcc -g  b.c -fPIC -shared -o libb.so
 
     gcc -g a.c -o a.out -L. -lb
 2. 提取主程序及动态链接库的符号表
+
     strip --only-keep-debug -o a.sym a.out
+	
     strip --only-keep-debug -o libb.sym libb.so
 3. 删除主程序及动态链接库的符号表
+
     strip a.out
+	
     strip libb.so
 4. 运行程序产生core文件
+{% highlight bash %}
     root@oa:/home/share/gdb# ./a.out
     Segmentation fault (core dumped)
+{% endhighlight %}
