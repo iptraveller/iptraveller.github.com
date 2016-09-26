@@ -34,9 +34,9 @@ kramdown:
 #
 owner:
   name: iptraveller
-  avatar: 
+  avatar: logo.png
   job: "A jekyll theme"
-  bio: "A simple and awesome blog theme powered by jekyll."
+  bio: "Cleverness is a gift, kindness is a choice."
   email:
   disqus-shortname:
   twitter: #username
