@@ -39,13 +39,14 @@ Linux定义线程调度策略在头文件<linux/sched.h>
 
 SCHED_NORMAL即为SCHED_OTHER：采用分时调度策略。  
 SCHED_FIFO：采用实时调度策略，且先到先服务，一直运行直到有更高优先级任务到达或自己放弃。  
-SCHED_RR：采用实时调度策略，且时间片轮转，时间片用完，系统将重新分配时间片，并置于就绪队列尾。 
+SCHED_RR：采用实时调度策略，且时间片轮转，时间片用完，系统将重新分配时间片，并置于就绪队列尾。  
 SCHED_BATCH：针对批处理进程。  
 SCHED_IDLE：使用此调度器的进程的优先级最低。在实现CFS时引入。  
 
 ## 3. Linux线程调度算法
 
 ## 4 shell下查看线程优先级
+
 ### 1 top命令
 
 	  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                          
