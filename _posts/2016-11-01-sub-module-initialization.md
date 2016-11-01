@@ -23,59 +23,67 @@ comments: true
 section起始地址取名为**_hello_start**  
 section结束地址取名为**_hello_end**
 
-	typedef struct hello_s {
-		char *name;
-		void (*func)(void);
-	} hello_t;
-	
-	extern hello_t _hello_start[];
-	extern hello_t _hello_end[];
-	
-	#define _init __attribute__((unused, section(".hello")))
-	#define module_init(name, func) \
-		static const hello_t hello_##func _init = {name, func}
+{% highlight c %}
+typedef struct hello_s {
+	char *name;
+	void (*func)(void);
+} hello_t;
+
+extern hello_t _hello_start[];
+extern hello_t _hello_end[];
+
+#define _init __attribute__((unused, section(".hello")))
+#define module_init(name, func) \
+	static const hello_t hello_##func _init = {name, func}
+{% endhighlight %}
 
 ### 子模块
 
 子模块注册初始化函数
 
-	static void module_1_init(void)
-	{
-		printf("module 1 init\n");
-	}
-	module_init("module_1", module_1_init);
+{% highlight c %}
+static void module_1_init(void)
+{
+	printf("module 1 init\n");
+}
+module_init("module_1", module_1_init);
 
-	static void module_2_init(void)
-	{
-		printf("module 2 init\n");
-	}
-	module_init("module_2", module_2_init);
+static void module_2_init(void)
+{
+	printf("module 2 init\n");
+}
+module_init("module_2", module_2_init);
+{% endhighlight %}
 
 ### 主框架初始化
 
 主框架遍历初始化函数进行调用
 
-	int main(void)
-	{
-		hello_t *call_ptr = _hello_start;
-		do {
-				printf("call module %s %p\n", call_ptr->name, call_ptr->func);
-				(*call_ptr->func)();
-				++call_ptr;
-		} while (call_ptr < _hello_end);
-		return 0;
-	}
+{% highlight c %}
+int main(void)
+{
+	hello_t *call_ptr = _hello_start;
+	do {
+			printf("call module %s %p\n", call_ptr->name, call_ptr->func);
+			(*call_ptr->func)();
+			++call_ptr;
+	} while (call_ptr < _hello_end);
+	return 0;
+}
+{% endhighlight %}
 	
 ### 运行
 
 上述代码已经基本完成的编码，但是明显有个疑问hello_start和hello_end只有声明没有定义，如何能跑起来。  
 果然编译时提示找不到
 
-	root@oa:/home/share# gcc a.c
-	/tmp/ccrLcAHk.o: In function `do_initcalls':
-	a.c:(.text+0x31): undefined reference to `_hello_start'
-	a.c:(.text+0x63): undefined reference to `_hello_end'
-	collect2: error: ld returned 1 exit status
+{% highlight bash %}
+root@oa:/home/share# gcc a.c
+/tmp/ccrLcAHk.o: In function `do_initcalls':
+a.c:(.text+0x31): undefined reference to `_hello_start'
+a.c:(.text+0x63): undefined reference to `_hello_end'
+collect2: error: ld returned 1 exit status
+{% endhighlight %}
 
 要让这代码运行起来还需要lds文件
 
@@ -98,12 +106,16 @@ section结束地址取名为**_hello_end**
 
 编译时使用**-T**参数加上该lds文件，就可以编译过了
 
-	root@oa:/home/share# gcc a.c -Ts.lds
-	root@oa:/home/share# ./a.out 
-	call module module_1 0x804844d
-	module 1 init
-	call module module_2 0x8048461
-	module 2 init
+{% highlight bash %}
+root@oa:/home/share# gcc a.c -Ts.lds
+root@oa:/home/share# ./a.out 
+call module module_1 0x804844d
+module 1 init
+call module module_2 0x8048461
+module 2 init
+{% endhighlight %}
+
+完整代码：[section-module-example](https://github.com/iptraveller/Code/tree/master/linux/section-module-example) 
 
 Author: chenxiawei@gmail.com  
 	
