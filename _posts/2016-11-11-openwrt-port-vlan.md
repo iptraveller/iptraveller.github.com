@@ -37,17 +37,21 @@ comments: true
 设备默认eth0为交换芯片口
 
 * 将端口3从默认vlan1中移出并加入vlan5
+
 	swconfig dev eth0 vlan 1 set ports '0 1 2 4'
 	swconfig dev eth0 vlan 5 set ports '0t 3t'
 	
 * 使能switch配置
+
 	swconfig dev eth0 set apply
 	
 * 创建vlan接口并配置IP地址
+
 	vconfig add eth0 5
 	ifconfig vlan5 2.2.2.3 netmask 255.255.255.0
 	
 * 查看配置的交换口
+
 	admin@Ruijie:/# swconfig dev eth0 show
 	Global attributes:
 			enable_vlan: 1
@@ -85,6 +89,7 @@ comments: true
 			  RX bytes:512 (512.0 B)  TX bytes:574 (574.0 B)
 
 测试结果
+
 	admin@Ruijie:/# ping 2.2.2.10
 	PING 2.2.2.10 (2.2.2.10): 56 data bytes
 	64 bytes from 2.2.2.10: seq=0 ttl=64 time=0.825 ms
@@ -93,6 +98,7 @@ comments: true
 
 
 * 通过uci进行配置保存
+
 	config interface 'vlan'
 			option ifname 'eth0.5'
 			option proto 'static'
@@ -112,6 +118,7 @@ comments: true
 			option ports '0t 3t'
 
 **如果想把wan口(eth1)也加入到同一个vlan中进行收发，则只需要修改network配置**
+
 	config interface 'vlan'
 		option ifname 'eth0.5 eth1.5'
 
@@ -122,16 +129,19 @@ comments: true
 	swconfig dev <dev> [port <port>|vlan <vlan>] (help|set <key> <value>|get <key>|load <config>|show)
 
 1. VLAN配置中的vid不一定要与VLAN编号一致，可以配置不一样，例如VLAN编号1的vid为10
+
 	VLAN 1:
 			vid: 10
 			ports: 0t 1 2 4 
 
 2. VLAN配置中的ports中，数字后带t表示收发带tag报文，例如端口3收发带vlan tag 5报文
+
 	VLAN 5:
 			vid: 5
 			ports: 0t 3t 
 			
 3. ports配置中的pvid表示，收到该端口收到不带tag报文时，默认转发的vlan，例如端口3收到不带tag报文后默认在vlan 3中进行转发
+
 	Port 3:
 			pvid: 3
 			link: port:3 link:up speed:100baseT full-duplex auto
