@@ -34,16 +34,15 @@ comments: true
 
 *	移动网络号码，用于识别移动客户所属的移动网络，2-3位
 
-移动：00,02,07,08  
-联通：01,06,09  
-电信：03,05,11  
+	> 移动：00,02,07,08  
+	> 联通：01,06,09  
+	> 电信：03,05,11  
 
 ## MSIN
 
-*	**mobile subscription identification number**
+*	**Mobile subscription identification number**
 
 *	移动用户的识别号码，共10位
-
 结构如下：  
 CC+M0M1M2M3+ABCD  
 CC由不同运营商分配，其中的M0M1M2M3和MDN号码中的H0H1H2H3可存在对应关系，ABCD四位为自由分配。
@@ -52,7 +51,6 @@ CC由不同运营商分配，其中的M0M1M2M3和MDN号码中的H0H1H2H3可存�
 *	**Mobile Subscriber International ISDN/PSTN number**
 
 *	指主叫用户为呼叫GSM PLMN中的一个移动用户所需拨的号码，作用同于固定网PSTN号码；是在公共电话网交换网络编号计划中，唯一能识别移动用户的号码。
-
 MSISDN = CC + NDC + SN  
 CC：Country Code，含义为国家码，中国为86  
 NDC：National Destination Code，表示国内目的地码，也称网络接入号。  
@@ -76,7 +74,6 @@ SN：Subscriber Number，客户号码。
 *	**Integrated circuit card identifier**
 
 * 集成电路卡识别码即SIM卡卡号，相当于手机号码的身份证。 ICCID为IC卡的唯一识别号码，共有20位数字组成
-
 前六位运营商代码：中国移动的为：898600；898602 ，中国联通的为：898601、898609，中国电信898603，898606。
 
 * 中国移动
