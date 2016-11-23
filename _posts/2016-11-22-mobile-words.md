@@ -42,19 +42,19 @@ comments: true
 
 *	**Mobile subscription identification number**
 
-*	移动用户的识别号码，共10位
-结构如下：  
-CC+M0M1M2M3+ABCD  
-CC由不同运营商分配，其中的M0M1M2M3和MDN号码中的H0H1H2H3可存在对应关系，ABCD四位为自由分配。
+*	移动用户的识别号码，共10位  
+	> 结构如下：  
+	> CC+M0M1M2M3+ABCD  
+	> CC由不同运营商分配，其中的M0M1M2M3和MDN号码中的H0H1H2H3可存在对应关系，ABCD四位为自由分配。
 
 ## MSISDN 
 *	**Mobile Subscriber International ISDN/PSTN number**
 
 *	指主叫用户为呼叫GSM PLMN中的一个移动用户所需拨的号码，作用同于固定网PSTN号码；是在公共电话网交换网络编号计划中，唯一能识别移动用户的号码。
-MSISDN = CC + NDC + SN  
-CC：Country Code，含义为国家码，中国为86  
-NDC：National Destination Code，表示国内目的地码，也称网络接入号。  
-SN：Subscriber Number，客户号码。
+	> MSISDN = CC + NDC + SN  
+	> CC：Country Code，含义为国家码，中国为86  
+	> NDC：National Destination Code，表示国内目的地码，也称网络接入号。  
+	> SN：Subscriber Number，客户号码。
 
 * 中国移动共计19个号段  
 1340~1348,135,136,137,138,139,147,150,151,152,157,158,159,178,182,183,184,187,188
@@ -76,9 +76,8 @@ SN：Subscriber Number，客户号码。
 * 集成电路卡识别码即SIM卡卡号，相当于手机号码的身份证。 ICCID为IC卡的唯一识别号码，共有20位数字组成
 前六位运营商代码：中国移动的为：898600；898602 ，中国联通的为：898601、898609，中国电信898603，898606。
 
-* 中国移动
-
-898600MFSSYYGXXXXXXP  
+* 中国移动  
+**898600MFSSYYGXXXXXXP**  
 89： 国际编号  
 86： 国家编号，86：中国  
 00： 运营商编号，00：中国移动  
@@ -101,9 +100,8 @@ G： SIM卡供应商代码
 XXXXXX： 用户识别码  
 P： 校验位
 
-* 中国联通
-
-898601YY8SSXXXXXXXXP  
+* 中国联通  
+**898601YY8SSXXXXXXXXP**  
 89： 国际编号  
 86： 国家编号，86：中国  
 01： 运营商编号，01：中国联通  
@@ -117,9 +115,8 @@ SS：2位省份编码
 XXXXXX： 卡商生产的顺序编码  
 P： 校验位  
 
-* 中国电信
-
-898603YYXMHHHXXXXXXP  
+* 中国电信  
+**898603YYXMHHHXXXXXXP**  
 89：国际编号  
 86：国家编号，86：中国  
 03：运营商编号，03：中国电信  
