@@ -10,7 +10,7 @@ comments: true
 
 *	**International Mobile Subscriber Identity**
 
-*	国际移动用户识别码,储存在SIM卡中，可用于区别移动用户的有效信息。其总长度不超过15位，同样使用0~9的数字，由3位MCC+2位MNC+10位MSIN构成。
+*	国际移动用户识别码,储存在SIM卡中，可用于区别移动用户的有效信息。其总长度不超过15位，使用0~9的数字，由3位MCC+2位MNC+10位MSIN构成。
 
 ## MCC
 
@@ -18,15 +18,15 @@ comments: true
 
 *	移动信号国家码，唯一识别移动用户所属的国家，共3位，中国为460
 
-第一位为地区编号  
-0 - Test networks  
-2 - Europe  
-3 - North America and the Caribbean  
-4 - Asia and the Middle East  
-5 - Oceania  
-6 - Africa  
-7 - South and Central America  
-9 - World-wide (Satellite, Air - aboard aircraft, Maritime - aboard ships, Antarctica)  
+	> 第一位为地区编号  
+	> 0 - Test networks  
+	> 2 - Europe  
+	> 3 - North America and the Caribbean  
+	> 4 - Asia and the Middle East  
+	> 5 - Oceania  
+	> 6 - Africa  
+	> 7 - South and Central America  
+	> 9 - World-wide (Satellite, Air - aboard aircraft, Maritime - aboard ships, Antarctica)  
 
 ## MNC
 
