@@ -103,7 +103,7 @@ comments: true
  * P： 校验位
 
 2. 中国联通  
- * **898601YY8SSXXXXXXXXP**  
+**898601YY8SSXXXXXXXXP**  
  * 89： 国际编号  
  * 86： 国家编号，86：中国  
  * 01： 运营商编号，01：中国联通  
@@ -118,7 +118,7 @@ comments: true
  * P： 校验位  
 
 3. 中国电信  
- * **898603YYXMHHHXXXXXXP**  
+**898603YYXMHHHXXXXXXP**  
  * 89：国际编号  
  * 86：国家编号，86：中国  
  * 03：运营商编号，03：中国电信  
