@@ -14,23 +14,17 @@ comments: true
 
 ### 软件配置
 
-1. Add Pair
-
 进入IxChariot界面，选择“Add Pair”  
 
 ![ixchariot1](/img/ixchariot-1.png) 
 
 弹出“Add an Endpoint Pair”对话框，主要设置  
-* Pair comment  
-说明
-* Endpoint 1 address  
-打流发起终端的IP地址
-* Endpoint 2 address  
-打流发往终端的IP地址
-* Network protocol  
-网络协议，一般默认TCP
-* Select Script  
-一般选择throughput.scr
+
+**Pair comment**：pair简要说明  
+**Endpoint 1 address**：打流发起终端的源IP地址  
+**Endpoint 2 address**：打流发往终端的目的IP地址  
+**Network protocol**：网络协议，一般默认TCP  
+**Select Script**：一般选择throughput.scr
 
 ![ixchariot2](/img/ixchariot-2.png) 
 
@@ -38,9 +32,7 @@ comments: true
 
 选择创建出的Pair，进行复制、粘贴，创建出一个一样配置的Pair，一般无线打流中创建多个pair可以将性能利用率达到最高。
 
-2. Run
-
-先选择菜单Run -> Set Run Options ... 设置运行参数  
+选择菜单Run -> Set Run Options ... 设置运行参数  
 “How to send a test run”中设置固定运行时间，比如设置为1分钟；  
 “How to report timings”中可以选择Real-time，实时查看性能数据  
 “Polling”中取消勾选Poll endpoints选项
@@ -59,9 +51,7 @@ comments: true
 
 ![ixchariot5](/img/ixchariot-5.png) 
 
-1. Throughput 
-
-设备吞吐量
+**Throughput**：设备吞吐量
 
 | 选项                      | 说明                                 | |
 |---------------------------|--------------------------------------|-|
@@ -73,9 +63,7 @@ comments: true
 | Measured Time(sec)        | 测试运行时间                         | |
 | Relative Precision        | 测试精度                             | |
 
-2. Transaction Rate
-
-传输速率，指脚本每秒执行的传输记录数量。
+**Transaction Rate**：传输速率，指脚本每秒执行的传输记录数量。
 
 | 选项                      | 说明                                 | |
 |---------------------------|--------------------------------------|-|
@@ -87,9 +75,7 @@ comments: true
 | Measured Time(sec)        | 测试运行时间                         | |
 | Relative Precision        | 测试精度                             | |
 
-3. Response Time
-
-响应时间，指一个测试传输记录完成所需要的时间。
+**Response Time**：响应时间，指一个测试传输记录完成所需要的时间。
 
 | 选项                      | 说明                                 | |
 |---------------------------|--------------------------------------|-|
@@ -101,9 +87,7 @@ comments: true
 | Measured Time(sec)        | 测试运行时间                         | |
 | Relative Precision        | 测试精度                             | |
 
-4. Raw Data Totals
-
-传输的数据量
+**Raw Data Totals**：传输的数据量
 
 | 选项                      | 说明                                 | |
 |---------------------------|--------------------------------------|-|
