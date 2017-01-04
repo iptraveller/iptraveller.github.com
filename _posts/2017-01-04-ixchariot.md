@@ -61,18 +61,55 @@ comments: true
 
 1. Throughput 
 
-| 选项                      | 说明                                 | 
-|---------------------------|--------------------------------------|
-| Timing Records Completed  | 测试记录完成的次数情况               | 
-| 95% Confidence Interval   | 95%可靠区间                          | 
-| Average(Mbps)             | 平均吞吐量，多Pair可以看单个及累加值 | 
-| Minimum(Mbps)             | 最小吞吐量                           | 
-| Maximum(Mbps)             | 最大吞吐量                           | 
-| Measured Time(sec)        | 测试运行时间                         | 
-| Relative Precision        | 测试精度                             | 
+设备吞吐量
+
+| 选项                      | 说明                                 | |
+|---------------------------|--------------------------------------|-|
+| Timing Records Completed  | 测试记录完成的次数情况               | |
+| 95% Confidence Interval   | 95%可靠区间                          | |
+| Average(Mbps)             | 平均吞吐量，多Pair可以看单个及累加值 | |
+| Minimum(Mbps)             | 最小吞吐量                           | |
+| Maximum(Mbps)             | 最大吞吐量                           | |
+| Measured Time(sec)        | 测试运行时间                         | |
+| Relative Precision        | 测试精度                             | |
 
 2. Transaction Rate
 
+传输速率，指脚本每秒执行的传输记录数量。
+
+| 选项                      | 说明                                 | |
+|---------------------------|--------------------------------------|-|
+| Timing Records Completed  | 测试记录完成的次数情况               | |
+| 95% Confidence Interval   | 95%可靠区间                          | |
+| Transaction Rate Average  | 平均传输速率                         | |
+| Transaction Rate Minimum  | 最小传输速率                         | |
+| Transaction Rate Maximum  | 最大传输速率                         | |
+| Measured Time(sec)        | 测试运行时间                         | |
+| Relative Precision        | 测试精度                             | |
+
 3. Response Time
 
+响应时间，指一个测试传输记录完成所需要的时间。
+
+| 选项                      | 说明                                 | |
+|---------------------------|--------------------------------------|-|
+| Timing Records Completed  | 测试记录完成的次数情况               | |
+| 95% Confidence Interval   | 95%可靠区间                          | |
+| Response Time Average     | 平均响应时间                         | |
+| Response Time Minimum     | 最小响应时间                         | |
+| Response Time Maximum     | 最大响应时间                         | |
+| Measured Time(sec)        | 测试运行时间                         | |
+| Relative Precision        | 测试精度                             | |
+
 4. Raw Data Totals
+
+传输的数据量
+
+| 选项                      | 说明                                 | |
+|---------------------------|--------------------------------------|-|
+| Timing Records Completed  | 测试记录完成的次数情况               | |
+| Transaction Count         | 传输的总量，等于传输次数*每次传输的量| |
+| Bytes Sent by E1          | Endpoint 1 发送的字节数              | |
+| Bytes Received by E1      | Endpoint 1 接收的字节数              | |
+| Measured Time(sec)        | 测试运行时间                         | |
+| Relative Precision        | 测试精度                             | |
