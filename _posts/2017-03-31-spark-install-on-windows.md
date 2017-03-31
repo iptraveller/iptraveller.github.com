@@ -9,7 +9,7 @@ comments: true
 
 ## 1. 安装jdk
 
-访问http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html，下载最新jdk
+访问[http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)，下载最新jdk
 
 当前windows X64最新版本为jdk-8u121-windows-x64.exe
 
@@ -32,7 +32,7 @@ comments: true
 
 ## 2. 安装scala
 
-访问http://www.scala-lang.org/download/all.html，下载所用spark对应的scala版本，比如我这里使用的Spark 1.6.2就只能使用Scala 2.10的各个版本，我们下载2.10.6版本http://downloads.lightbend.com/scala/2.10.6/scala-2.10.6.tgz
+访问[http://www.scala-lang.org/download/all.html](http://www.scala-lang.org/download/all.html)，下载所用spark对应的scala版本，比如我这里使用的Spark 1.6.2就只能使用Scala 2.10的各个版本，我们下载2.10.6版本[http://downloads.lightbend.com/scala/2.10.6/scala-2.10.6.tgz](http://downloads.lightbend.com/scala/2.10.6/scala-2.10.6.tgz)
 
 解压缩并且文件夹重命名为D:\scala\
 
@@ -51,7 +51,7 @@ comments: true
 
 ## 3. 安装hadoop及配置hdfs
 
-访问https://archive.apache.org/dist/hadoop/common/，我们选择hadoop-2.6.4，下载https://archive.apache.org/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz
+访问[https://archive.apache.org/dist/hadoop/common/](https://archive.apache.org/dist/hadoop/common/)，我们选择hadoop-2.6.4，下载[https://archive.apache.org/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz](https://archive.apache.org/dist/hadoop/common/hadoop-2.6.4/hadoop-2.6.4.tar.gz)
 
 解压缩并重命名为目录D:\hadoop
 
@@ -122,7 +122,7 @@ comments: true
 	@rem set JAVA_HOME=%JAVA_HOME%
 	set JAVA_HOME=C:\Java\jdk1.8.0_121
 
-访问https://github.com/amihalik/hadoop-common-2.6.0-bin 下载bin目录下的所有文件，并替换D:\hadoop\bin下文件。这里的版本号需要相互对应，否则执行hadoop fs时会提示错误。
+访问[https://github.com/amihalik/hadoop-common-2.6.0-bin](https://github.com/amihalik/hadoop-common-2.6.0-bin) 下载bin目录下的所有文件，并替换D:\hadoop\bin下文件。这里的版本号需要相互对应，否则执行hadoop fs时会提示错误。
 
 确保D:\hadoop\bin\hadoop.cmd保存为windows格式的文件。
 
@@ -142,7 +142,7 @@ hadoop结点管理GUI：http://localhost:50070/
 
 ## 4. 安装spark
 
-访问http://spark.apache.org/downloads.html，Spark release我们选择1.6.2，package type选择Pre-built for hadoop 2.6
+访问[http://spark.apache.org/downloads.html](http://spark.apache.org/downloads.html)，Spark release我们选择1.6.2，package type选择Pre-built for hadoop 2.6
 
 下载spark-1.6.2-bin-hadoop2.6.tgz，解压并重名为到目录D:\spark
 
