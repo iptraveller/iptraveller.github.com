@@ -55,6 +55,7 @@ comments: true
 	D:\kafka\bin\windows> kafka-console-producer.bat --broker-list localhost:9092 --topic hello
 	hello
 	world
+
 在D:\kafka\bin\windows目录下运行**kafka-console-consumer.bat**从topic收消息
 
 	D:\kafka\bin\windows>kafka-console-consumer.bat --zookeeper localhost:2181 --topic  hello --from-beginning
