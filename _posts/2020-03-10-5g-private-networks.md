@@ -122,7 +122,21 @@ MEC DP查看属于所有从gNB发出的所有GTP隧道的数据包的目标IP地
   
 #### NR-U
 未经许可的5G存在两种主要情况： 
- 
+* **使用许可的锚部署5G NR： **有时称为许可辅助访问**（LAA）NR-U**，它是LTE-LAA的类似物。它最适合寻求通过访问5GHz频谱获得容量增加的公共网络运营商。随着时间的推移，它将扩展到未经许可的6 GHz和毫米波（mmWave）频谱。 
+* **仅在无执照频谱中部署的5G NR：**有时称为**standalone NR-U**，对于专用网络非常有用。在LTE的MulteFire中有一个类似于独立NR-U的模拟。但是，在5G情况下，NR-U在3GPP标准流程的早期就已指定。这使NR-U成为5G的本机操作模式。 
+
+在免许可场景下，针对5G提出了两种主要的频谱共享模式：
+* **NR的异步共享频谱： **这是一条适用于免执照频谱的现有共存规则内的演进路径，NR在这些频段中部署时必须遵守Listen-before-talk（LBT）共享协议。NR可以采用多种技术来提高这些共享频谱带中的可靠性和可用性。
+* **同步共享频谱：**这是目前正在评估和开发中的更高级方案。它具有更有效地共享频谱，更可预测，更可靠的性能的巨大潜力。但是，这种方法需要运营商之间共享具有共同同步参考的机制，并且需要监管机构的支持。最初在美国，后来在欧洲，6 GHz频段是此方法的理想选择。 
+
+
+### 案例
+
+
+### 最新进展
+
+
 ## 参考资料
 * [7 Deployment Scenarios of Private 5G Networks](https://www.netmanias.com/en/post/blog/14500/5g-edge-kt-sk-telecom/7-deployment-scenarios-of-private-5g-networks)
 * [5G时代，电信运营商竟可让千行百业的企业成为“运营商”](https://mp.weixin.qq.com/s/Ia4AdvRFepMNUfAvCQBqQw)
+* Qualcomm：Private 5G Mobile Networks for Industrial IoT
