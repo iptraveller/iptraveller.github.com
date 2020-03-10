@@ -101,9 +101,28 @@ MEC DP查看属于所有从gNB发出的所有GTP隧道的数据包的目标IP地
 **电信运营商投资模式对比**  
 ![09](/img/2020-03-10-09.png) 
 
-### 频谱分配
+### 网络频谱
+专用网络可以使用各种频率的频谱，但要遵守各种许可条款。从工业物联网的角度来看，重要的一点是，频谱必须可用，并得到产品和集成商生态系统的支持，并且要遵守能够进行长期规划的稳定法规。对于寻求对具有长生命周期的运营技术进行大量投资的工业用户而言，这些都是非常重要的。 
 
-
+#### 频谱选项 
+下面总结了向希望部署私有5G网络的工业公司开放的四个主要频谱选项  
+* **运营商拥有的许可频谱（Licensed Spectrum Owned by Operators）**
+  * 延续经典频谱许可模式
+  * 正在开发专用网络的频谱租赁/共享机制
+* **专用企业频谱（Dedicated Enterprise Spectrum）**
+  * 例如，德国将100 MHz（3.7-3.8 GHz）分配给工业用户
+* **带异步分享的未经许可的频谱（Unlicensed Spectrum(w/Asynchronous Sharing)）**
+  * 5 GHz已开始；美国开放6 GHz，欧洲紧随其后
+  * 5 GHz频段已集成Listen-before-talk规定
+  * 对于不需要URLLC的专用5G网络最有用
+* **带同步分享的未经许可的频谱（Unlicensed Spectrum(w/Synchronized Sharing)）**
+  * 在新的无执照分配中（例如6 GHz），有机会引入新的共享机制
+  * 无线同步是改善共享的一种轻量级方法
+  * 在共址部署（co-sited deployments）中实现更可靠的性能；使免执照频谱适合URLLC应用
+  
+#### NR-U
+未经许可的5G存在两种主要情况： 
+ 
 ## 参考资料
 * [7 Deployment Scenarios of Private 5G Networks](https://www.netmanias.com/en/post/blog/14500/5g-edge-kt-sk-telecom/7-deployment-scenarios-of-private-5g-networks)
 * [5G时代，电信运营商竟可让千行百业的企业成为“运营商”](https://mp.weixin.qq.com/s/Ia4AdvRFepMNUfAvCQBqQw)
