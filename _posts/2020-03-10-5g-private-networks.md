@@ -98,5 +98,12 @@ MEC DP查看属于所有从gNB发出的所有GTP隧道的数据包的目标IP地
 
 与情况6）相同，但不同之处在于仅部署了企业中的RU / DU，并且CU放置在移动网络的边缘云中，并且专用网络流量是从F1接口而不是从F1接口本地发出的N3接口。  
 
+**电信运营商投资模式对比**  
+![09](/img/2020-03-10-09.png) 
+
+### 频谱分配
+
+
 ## 参考资料
 * [7 Deployment Scenarios of Private 5G Networks](https://www.netmanias.com/en/post/blog/14500/5g-edge-kt-sk-telecom/7-deployment-scenarios-of-private-5g-networks)
+* [5G时代，电信运营商竟可让千行百业的企业成为“运营商”](https://mp.weixin.qq.com/s/Ia4AdvRFepMNUfAvCQBqQw)
