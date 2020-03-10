@@ -17,8 +17,10 @@ comments: true
 ### 两种形式
 * 独立建立私网
 * 共享运营商网络（网络切片）
-![01](/img/2020-03-10-01.jpg) 
-### 其中部署方案
+
+![01](/img/2020-03-10-01.png) 
+
+### 七种部署方案
 
 ## 参考资料
-  [7 Deployment Scenarios of Private 5G Networks](https://www.netmanias.com/en/post/blog/14500/5g-edge-kt-sk-telecom/7-deployment-scenarios-of-private-5g-networks)
+* [7 Deployment Scenarios of Private 5G Networks](https://www.netmanias.com/en/post/blog/14500/5g-edge-kt-sk-telecom/7-deployment-scenarios-of-private-5g-networks)
